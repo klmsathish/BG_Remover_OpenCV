@@ -25,7 +25,8 @@ else:
     """, unsafe_allow_html=True)
 
     st.markdown('<p class="big-font">Original Image</p>', unsafe_allow_html=True)
-    st.image(file)
+    image = Image.open(file)
+    st.image(image)
     try:
         file_bytes = np.asarray(bytearray(file.read()),dtype=np.uint8)
         img = cv.imdecode(file_bytes, 1)
