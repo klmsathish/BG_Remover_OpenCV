@@ -16,6 +16,13 @@ else:
     with open("style.css") as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
     # image = Image.open(file)
+    st.markdown("""
+    <style>
+    .big-font {
+        font-size:30px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     try:
         file_bytes = np.asarray(bytearray(file.read()),dtype=np.uint8)
         img = cv.imdecode(file_bytes, 1)
