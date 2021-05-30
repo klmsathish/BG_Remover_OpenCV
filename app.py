@@ -30,7 +30,6 @@ else:
     try:
         file_bytes = np.asarray(bytearray(file.read()),dtype=np.uint8)
         img = cv.imdecode(file_bytes, 1)
-        print(img)
         original = img.copy()
 
         low_thresh = 7
