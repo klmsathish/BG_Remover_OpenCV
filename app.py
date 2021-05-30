@@ -69,6 +69,6 @@ else:
 
         img.putdata(newData)
         st.markdown('<p class="big-font">After removing Background</p>', unsafe_allow_html=True)
-        st.image(img)
+        st.image(img,width = 350,height = 180)
     finally:
             print("done")
