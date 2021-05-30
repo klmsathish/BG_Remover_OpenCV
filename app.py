@@ -22,7 +22,7 @@ else:
         original = img.copy()
 
         low_thresh = 6
-        high_thresh = 6
+        high_thresh = 7
         edges = cv.GaussianBlur(img, (21, 51), 3) #In Gaussian Blur operation, the image is convolved with a Gaussian filter instead of the box filter. The Gaussian filter is a low-pass filter that removes the high-frequency components are reduced.
         edges = cv.cvtColor(edges, cv.COLOR_BGR2GRAY) # Changing colour image to B/W
         edges = cv.Canny(edges,low_thresh, high_thresh) #Canny Edge Detection is a popular edge detection algorithm.It helps in Noise Reduction,Finding Intensity Gradient of the Image
